@@ -7,7 +7,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: "/",
+    //publicPath: "/",
   },
 
   resolve: {
