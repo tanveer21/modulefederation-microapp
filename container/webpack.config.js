@@ -2,6 +2,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const deps = require("./package.json").dependencies;
+const bookingAppUrl = process.env.BOOKING_APP_URL ? process.env.BOOKING_APP_URL : 'http://localhost:8081';
+
+
 module.exports = {
   output: {
     publicPath: "http://localhost:8080/",
@@ -44,7 +47,7 @@ module.exports = {
       name: "container",
       // filename: "remoteEntry.js",
       remotes: {
-        bookingApp: 'booking@http://localhost:8081/remoteEntry.js'
+        bookingApp: `booking@${bookingAppUrl}/remoteEntry.js`
       },
       // exposes: {},
       shared: {

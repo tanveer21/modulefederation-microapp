@@ -5,16 +5,17 @@ import "./index.css";
 
 const App = () => (
   <div className="container">
-    <div style={{textAlign: 'center'}}>Booking React App</div>
-    {/* <div>Language: JavaScript</div>
-    <div>CSS: Empty CSS</div>  */}
+      <div style={{textAlign: 'center'}}>Booking React App
+        {/* <p>Environment variable App name {process.env.BOOKING_APP_NAME}</p>
+        <p>Api Url: {process.env.API_URL}</p> */}
+      </div>
   </div>
 );
 
 
-// if(process.env.NODE_ENV === 'development') {
-//   bookingAppInit(document.getElementById('booking-app'))
-// }
+if(process.env.NODE_ENV === 'development') {
+  bookingAppInit(document.getElementById('booking-app'))
+}
 function bookingAppInit(ele) {
   //createRoot(ele).render(<App />);
   ReactDOM.render(<App />, ele);

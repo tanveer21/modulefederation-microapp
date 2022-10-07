@@ -1,10 +1,13 @@
+var webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+// const Dotenv = require('dotenv-webpack')
 
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:8081/",
+    filename: '[name].[contenthash].js',
+    publicPath: "/",
   },
 
   resolve: {
@@ -62,5 +65,9 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
+    // new Dotenv({
+    //   systemvars: true,
+    //   path: `./environments/.env${env.file ? `.${env.file}` : ''}`
+    // }),
   ],
 };
