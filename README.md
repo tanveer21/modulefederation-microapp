@@ -1,2 +1,2 @@
 # modulefederation-microapp
-Microfrontends using module federation 
+Sample Microfrontends using Webpack Module Federation 
