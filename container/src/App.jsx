@@ -6,10 +6,10 @@ import "./index.css";
 const App = () => {
   return (
     <div className="container">
-      <div>Name: Container React Application</div>
-       <Booking />
+        <div>Name: Container React Application</div>
+        <Booking />
     </div>
   )
 }
 
-ReactDOM.render(<App />, document.getElementById("container-app"));
+ReactDOM.render(<App/>, document.getElementById("container-app"));

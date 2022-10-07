@@ -2,13 +2,12 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const deps = require("./package.json").dependencies;
-const bookingAppUrl = process.env.BOOKING_APP_URL ? process.env.BOOKING_APP_URL : 'http://localhost:8081';
+const bookingAppUrl = process.env.BOOKING_APP_URL ? process.env.BOOKING_APP_URL : 'http://127.0.0.1:8887';//
 
 
 module.exports = {
   output: {
-    filename: '[name].[contenthash].js',
-    publicPath: "/",
+    filename:'[name].[contenthash].js'
   },
 
   resolve: {

@@ -9,5 +9,4 @@ const Booking = () => {
 
   return ( <div style={{border:'solid 2px', margin:'5%'}} ref={ref}></div> )
 }
-
 export default Booking
