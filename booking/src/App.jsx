@@ -14,7 +14,7 @@ const App = () => (
 
 
 //if(process.env.NODE_ENV === 'development') {
-  bookingAppInit(document.getElementById('booking-app'))
+  // bookingAppInit(document.getElementById('booking-app'))
 //}
 function bookingAppInit(ele) {
   //createRoot(ele).render(<App />);

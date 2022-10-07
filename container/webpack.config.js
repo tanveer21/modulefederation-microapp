@@ -7,7 +7,8 @@ const bookingAppUrl = process.env.BOOKING_APP_URL ? process.env.BOOKING_APP_URL 
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:8080/",
+    filename: '[name].[contenthash].js',
+    publicPath: "/",
   },
 
   resolve: {
